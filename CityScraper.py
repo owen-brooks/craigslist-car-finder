@@ -20,7 +20,7 @@ def listStates():
 
 
 def scrapeCarLinks():
-    # Find links for car search in all regions
+    # Find US craigslist links
     # Returns: dict of states and links
 
     data = {}
@@ -31,7 +31,7 @@ def scrapeCarLinks():
         regionHTML = USSection.find_all("ul")[idx].find_all("a")
         regionList = []
         for ii in regionHTML:
-            regionList.append(ii['href'] + 'search/cta?query=')
+            regionList.append(ii['href'])
         data[state.text] = regionList
     return data
 
