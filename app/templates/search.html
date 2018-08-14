@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+  <title>Search Results</title>
+</head>
+
+<body>
+  <div class="blurred-box">
+    <form action="/results" method="post">
+      <div class="content">
+        <h1>Craigslist Car Finder</h1>
+        <div class="input-group">
+          <input type="text" class="form-control input-lg" name="input" placeholder="Search listings nationwide" autofocus>
+          <div class="input-group-btn">
+            <button class="btn btn-primary btn-lg" type="submit">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
