@@ -1,2 +1,3 @@
-# craigslist-car-scraper
-web scraper to gather nation-wide car listings
+# craigslist-web-scraper
+
+> web scraper to gather nation-wide listings

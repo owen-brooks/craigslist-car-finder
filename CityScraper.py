@@ -31,7 +31,7 @@ def scrapeCarLinks():
         regionHTML = USSection.find_all("ul")[idx].find_all("a")
         regionList = []
         for ii in regionHTML:
-            regionList.append(ii['href'])
+            regionList.append(ii['href'].split('.org')[0] + '.org')
         data[state.text] = regionList
     return data
 
