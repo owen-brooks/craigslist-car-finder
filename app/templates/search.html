@@ -6,48 +6,59 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
   <title>Craigslist Car Finder</title>
 </head>
 
 <body>
+
   <div class="background-image"></div>
-  <div class="blurred-box">
+
+  <div class="content-search">
     <form action="/results" method="post">
-      <div class="content">
-        <h1>Craigslist Car Finder</h1>
-        <div class="input-group">
-          <input type="text" class="form-control input-lg" name="input" placeholder="Search listings nationwide" autofocus>
-          <div class="input-group-btn">
-            <button class="btn btn-primary btn-lg" type="submit">
-              <i class="glyphicon glyphicon-search"></i>
-            </button>
-          </div>
+      <h1>Craigslist Car Finder</h1>
+      <div class="input-group">
+        <input type="text" class="form-control input-lg" name="input" placeholder="Search listings nationwide" autofocus>
+        <div class="input-group-btn">
+          <button id="refresh" class="btn btn-primary btn-lg" type="submit">
+            <i id="icon" class="glyphicon glyphicon-search"></i>
+          </button>
         </div>
-        <!-- <div class="row">
-          <div class="column">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-          </div>
-          <div class="column">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-            <img src="../static/images/retro.jpg">
-          </div>
-        </div> -->
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="https://vancouver.craigslist.ca/bnc/ctd/d/2013-chevrolet-orlando-162k-7/6664674047.html">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+        </div>
+        <div class="column">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+          <img src="../static/images/retro.jpg">
+        </div>
       </div>
     </form>
+
+
   </div>
+  <script>
+    $("#refresh").click(function () {
+      $('#icon').addClass("glyphicon-refresh glyphicon-refresh-animate");
+      $('#icon').removeClass("glyphicon-search")
+    });
+  </script>
+
 </body>
+
 
 </html>

@@ -11,6 +11,7 @@ https://medium.com/@AmJustSam
 html {
   width: 100vw;
   height: 95vh;
+  overflow-y: scroll;
 }
 
 /* CSS which you need for blurred box */
@@ -30,16 +31,15 @@ body {
   -ms-filter: blur(5px);
   filter: blur(10px);
 }
-.content {
+.content-search {
   position: fixed;
 
   z-index: 1;
 
   text-align: center;
-  height: 95%;
-  width: 95%;
+
   margin-top: 5%;
-  margin-bottom: 2.5%;
+
   overflow: hidden;
 }
 
@@ -67,5 +67,28 @@ h1 {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
+  }
+}
+
+.glyphicon-refresh-animate {
+  -animation: spin 0.7s infinite linear;
+  -webkit-animation: spin2 0.7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1) rotate(360deg);
   }
 }

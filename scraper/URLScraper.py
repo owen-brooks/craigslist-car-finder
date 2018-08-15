@@ -22,7 +22,7 @@ def listStates():
 def scrapeCarLinks():
     # Find US craigslist links
     # Returns: dict of states and links
-
+    print('Finding Links......')
     data = {}
     # Remove territories
     stateList = USSection.find_all("h4")[:-1]
@@ -33,7 +33,6 @@ def scrapeCarLinks():
         for ii in regionHTML:
             regionList.append(ii['href'].split('.org')[0] + '.org')
         data[state.text] = regionList
+    print('Links found\n')
     return data
 
-
-print(scrapeCarLinks())
