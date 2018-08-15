@@ -18,8 +18,7 @@ body {
 }
 .background-image {
   position: fixed;
-  left: 0;
-  right: 0;
+
   z-index: 1;
   background-size: cover;
   background-image: url(images/retro.jpg);
