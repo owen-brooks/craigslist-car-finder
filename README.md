@@ -20,7 +20,7 @@ Currently a search collects the following data from a post:
 - State
 - Link to post
 
-For example - a search for "Datsun 510 will return the following:
+For example - a search for "Datsun 510" will return the following:
 
 ![alt text](docs/results.png "Results Screenshot")
 
