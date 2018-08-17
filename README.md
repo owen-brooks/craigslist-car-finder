@@ -31,15 +31,25 @@ Each row is clickable, and will open the Craiglist post in another tab.
 **Overview of file structure:**
 
 ```
-|___ app
-    |___ static
-    |___ templates
-    |___ __init__.py
-    |___ controller.py
 |___ scraper
+        |___ URLScraper.py
+        |___ CarScraper.py
 |___ run.py
 |___ app.yaml
+|___ app
+        |___ controller.py
+        |___ __init__.py
+        |___ static
+                |___ images
+                        |___ retro.jpg
+                |___ style.css
+        |___ templates
+                |___ search.html
+|___ requirements.txt
 |___ docs
+        |___ results.png
+        |___ home.png
+|___ README.md
 ```
 
 ## TODO / Notes
