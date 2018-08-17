@@ -44,6 +44,6 @@ Each row is clickable, and will open the Craiglist post in another tab.
 
 ## TODO / Notes
 
-- Deploy to Google Cloud. Has all the files just need to create app and collect requirements
+- Deploy to Google Cloud. Has all the files, just need to create app and collect requirements
 - Collect additional data (transmission type, fuel, title, etc.)
-- Try to present cars as images. This can be tough to scale - it seems the sites for different regions label there images in HTML differently
+- Try to present cars as images. This can be tough to scale - it seems the sites for different regions, label the post images in HTML differently
