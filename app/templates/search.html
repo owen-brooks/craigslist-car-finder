@@ -27,34 +27,46 @@
           </button>
         </div>
       </div>
-      <div class="row">
-        <div class="column">
-          <img src="https://vancouver.craigslist.ca/bnc/ctd/d/2013-chevrolet-orlando-162k-7/6664674047.html">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-        </div>
-        <div class="column">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-          <img src="../static/images/retro.jpg">
-        </div>
-      </div>
     </form>
+{% if data is defined %}
+<div class="container">
+    <h3 align="center">{{ data|length }} Result(s)</h3>
+    <table class ="table table-hover">
+        <thead>
 
+            <tr>
+                {% for col in header %}
+                <th align="center">
+                    {{ col }}
+                </th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+        {% for key, value in data.items() %}
+
+        <tr  class='clickable-row' data-href={{ value['Link'] }}>
+            {% for col in header %}
+
+                <td>{{ value[col] }}</td>
+
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% endif %}
 
   </div>
   <script>
     $("#refresh").click(function () {
       $('#icon').addClass("glyphicon-refresh glyphicon-refresh-animate");
       $('#icon').removeClass("glyphicon-search")
+    });
+
+    $(".clickable-row").click(function() {
+        window.open($(this).data("href"), 'window name', 'window settings');
     });
   </script>
 

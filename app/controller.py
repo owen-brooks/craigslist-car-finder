@@ -22,8 +22,8 @@ def search_request():
     searchTerm = request.form['input']
     if (searchTerm == ''):
         return render_template('search.html')
-    searchTerm.replace('', '+')
+    searchTerm = searchTerm.replace(' ', '+')
     searchURL = '/search/cta?query='
-    results = findPosts({}, urlDict, searchURL, searchTerm)
-    print(results)
-    return render_template('search.html')
+    results = findPosts({}, scrapeCarLinks(), searchURL, searchTerm)
+    header = ['Price', 'Post Title', 'State']
+    return render_template('search.html', data=results, header=header)

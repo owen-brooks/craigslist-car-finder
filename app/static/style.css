@@ -4,14 +4,12 @@ https://medium.com/@AmJustSam
 */
 
 * {
-  margin: 0;
-  padding: 0;
 }
 
 html {
   width: 100vw;
   height: 95vh;
-  overflow-y: scroll;
+  overflow: visible;
 }
 
 /* CSS which you need for blurred box */
@@ -29,10 +27,11 @@ body {
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
-  filter: blur(10px);
+  filter: blur(12px);
 }
+
 .content-search {
-  position: fixed;
+  position: absolute;
 
   z-index: 1;
 
@@ -40,7 +39,7 @@ body {
 
   margin-top: 5%;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
 .input-group {
@@ -52,22 +51,7 @@ body {
 h1 {
   font-family: Pacifico;
   font-size: 50px;
-  margin-bottom: 20px;
-}
-
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
+  margin-bottom: 30px;
 }
 
 .glyphicon-refresh-animate {
@@ -91,4 +75,29 @@ h1 {
   to {
     transform: scale(1) rotate(360deg);
   }
+}
+
+.container {
+}
+
+table {
+  background-color: rgba(255, 255, 255, 0.384);
+  border-radius: 10px;
+}
+
+th {
+  text-align: center;
+}
+.clickable-row {
+  cursor: pointer;
+}
+
+td {
+  font-weight: bold;
+  border-color: black;
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: rgba(255, 255, 255, 0.274);
 }
