@@ -46,6 +46,5 @@ Thumbs.db
 *.exe
 *.o
 *.so
-
-
-*/__pycache__
+app/__pycache__
+scraper/__pycache__
