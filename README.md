@@ -24,7 +24,7 @@ For example - a search for "Datsun 510" will return the following:
 
 ![alt text](docs/results.png "Results Screenshot")
 
-Each row is clickable and will open the Craiglist in another tab.
+Each row is clickable, and will open the Craiglist post in another tab.
 
 ## Code
 
