@@ -53,6 +53,12 @@ def findPosts(hashTable, baseURLDict, searchURL, searchTerm):
                         'a', {'class': 'result-title hdrlnk'}).text
                     carData['Link'] = car.find(
                         'a', {'class': 'result-title hdrlnk'})['href']
+                    carRequest = urllib.request.Request(carData['Link'])
+                    carResponse = urllib.request.urlopen(request)
+                    carPage = BeautifulSoup(
+                        response.read().decode('utf-8'), 'html.parser')
+                    carData['Photo'] = carPage.find(
+                        'a', {'title': '1'})['href']
                     carData['State'] = state
                     # Some posts dont have prices
                     try:
