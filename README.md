@@ -4,13 +4,13 @@
 
 Check out the intro I wrote on web scraping [here](https://owen-brooks.github.io/maven/java/build/2018/08/15/web-scraping.html).
 
-## Purpose
+## purpose
 
 For people who like weird / rare cars, Craigslist is a great resource. Unlike other items sold on Craigslist, a car buyer will often be willing and sometimes have no choice but to search nationwide for the right car. This application allows users to search across all US Craigslist pages, for the car they are looking to buy.
 
 ![alt text](docs/home.png "Home Screenshot")
 
-## Features
+## features
 
 Currently a search collects the following data from a post:
 
@@ -26,7 +26,7 @@ For example - a search for "Datsun 510" will return the following:
 
 Each row is clickable, and will open the Craiglist post in another tab.
 
-## Code
+## code
 
 **Overview of file structure:**
 
@@ -52,7 +52,7 @@ Each row is clickable, and will open the Craiglist post in another tab.
 |___ README.md
 ```
 
-## TODO / Notes
+## TODO
 
 - Deploy to Google Cloud. Has all the files, just need to create app and collect requirements
 - Collect additional data (transmission type, fuel, title, etc.)
